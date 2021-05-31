@@ -1,21 +1,16 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native";
 import colors from "../constants/colors";
 
-const AppText2 = (props) => {
-  return (
-    <Text onPress={props.onPress} style={[styles.text, props.style]}>
-      {props.children}
-    </Text>
-  );
+const AppText2 = ({ fontColor = colors.primary, children }) => {
+  return <Text style={[styles.text, { color: fontColor }]}>{children}</Text>;
 };
+
 const styles = StyleSheet.create({
   text: {
-    color: colors.white,
-    textTransform: "uppercase",
-    fontWeight: "700",
-    letterSpacing: 2,
-    fontSize: 15,
+    fontSize: 18,
+    fontWeight:'bold'
   },
 });
+
 export default AppText2;

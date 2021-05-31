@@ -1,14 +1,16 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native";
 import colors from "../constants/colors";
 
-const AppText = (props) => {
-  return <Text style={[styles.text, props.style]}>{props.children}</Text>;
+const AppHeading2 = ({ fontColor = colors.black, children }) => {
+  return <Text style={[styles.text, { color: fontColor }]}>{children}</Text>;
 };
+
 const styles = StyleSheet.create({
   text: {
-    fontSize: 18,
-    color: colors.secondary,
+    fontSize: 14,
+    fontWeight:'bold'
   },
 });
-export default AppText;
+
+export default AppHeading2;
