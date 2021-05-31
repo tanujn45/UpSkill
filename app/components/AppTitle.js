@@ -8,7 +8,7 @@ const AppTitle = ({ fontColor = colors.black, children }) => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 30,
+    fontSize: 38,
     fontWeight: "700",
   },
 });
