@@ -3,16 +3,18 @@ import { Text, StyleSheet } from 'react-native';
 import { color } from 'react-native-reanimated';
 import colors from '../constants/colors';
 
-const AppText = (props) => {
+const AppText = ({ fontColor = colors.white, style, children }) => {
     return (
-        <Text style={[styles.text, { ...props.style }]}>{props.children}</Text>
+        <Text style={[styles.text, { ...style }, { color: fontColor }]}>
+            {children}
+        </Text>
     );
 };
 
 const styles = StyleSheet.create({
     text: {
         fontSize: 15,
-        fontFamily: 'PlusJakartaSans-Bold',
+        fontFamily: 'PlusJakartaSans-Light',
         color: colors.black
     }
 });

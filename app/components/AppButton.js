@@ -1,9 +1,7 @@
 import React from 'react';
 import {
-    View,
     Text,
     StyleSheet,
-    TouchableHighlight,
     TouchableOpacity,
     Image
 } from 'react-native';
@@ -14,9 +12,7 @@ const AppButton = ({
     bgColor = colors.grey,
     fontColor = colors.white,
     icon,
-    iconColor = colors.white,
     title = 'Continue',
-    props,
     onPress
 }) => {
     return (

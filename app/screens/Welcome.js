@@ -1,30 +1,20 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import AppLoading from 'expo-app-loading';
-import { useFonts } from 'expo-font';
 import AppButton from '../components/AppButton';
 import colors from '../constants/colors';
 import AppTitle from '../components/AppTitle';
 import AppText from '../components/AppText';
 import Screen from '../components/Screen';
 
-const SignIn = ({ navigation }) => {
+const Welcome = ({ navigation }) => {
     return (
-        <Screen bgColor={colors.black}>
+        <Screen>
             <View style={styles.container}>
                 <View style={{ marginBottom: 30 }}>
-                    <AppTitle
-                        fontColor={colors.white}
-                        style={{ color: colors.white }}
-                    >
+                    <AppTitle fontColor={colors.white}>
                         World is the New
-                        <AppTitle
-                            fontColor={colors.primary}
-                            style={{ color: colors.primary }}
-                        >
-                            School
-                        </AppTitle>
                     </AppTitle>
+                    <AppTitle fontColor={colors.primary}>School</AppTitle>
                     <AppText
                         fontColor={colors.white}
                         style={{ color: colors.white }}
@@ -50,7 +40,7 @@ const SignIn = ({ navigation }) => {
                     <View style={styles.hr} />
                 </View>
                 <AppButton
-                    onPress={() => navigation.navigate('SomeScreen')}
+                    onPress={() => navigation.navigate('CompleteProfile')}
                     title="Create an account"
                     bgColor={colors.primary}
                 />
@@ -72,7 +62,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         padding: 20
     },
-
     textContainer: {
         borderTopLeftRadius: 50,
         backgroundColor: colors.white,
@@ -102,4 +91,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default SignIn;
+export default Welcome;
