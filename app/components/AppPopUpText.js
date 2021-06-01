@@ -9,7 +9,7 @@ const AppPopUpText = ({ fontColor = colors.black, children }) => {
 const styles = StyleSheet.create({
   text: {
     fontSize: 28,
-    fontWeight:'bold'
+    fontFamily: 'PlusJakartaSans-Bold'
   },
 });
 

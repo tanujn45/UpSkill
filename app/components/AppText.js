@@ -9,7 +9,7 @@ const AppHeading2 = ({ fontColor = colors.black, children }) => {
 const styles = StyleSheet.create({
     text: {
         fontSize: 14,
-        fontWeight: 'bold'
+        fontFamily: 'PlusJakartaSans-Bold'
     }
 });
 

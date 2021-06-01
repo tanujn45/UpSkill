@@ -9,7 +9,7 @@ const AppTitle2 = ({ fontColor = colors.black, children }) => {
 const styles = StyleSheet.create({
   text: {
     fontSize: 30,
-    fontWeight: "800",
+    fontFamily: 'PlusJakartaSans-Medium'
   },
 });
 

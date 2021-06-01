@@ -3,6 +3,7 @@ import React from 'react';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import SignIn from './app/screens/SignIn';
+import HomeScreen from './app/screens/HomeScreen'
 
 export default function App() {
     let [fontsLoaded] = useFonts({
@@ -15,6 +16,6 @@ export default function App() {
     if (!fontsLoaded) {
         return <AppLoading />;
     } else {
-        return <SignIn />;
+        return <HomeScreen />;
     }
 }

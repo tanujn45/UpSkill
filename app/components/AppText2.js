@@ -9,7 +9,7 @@ const AppText2 = ({ fontColor = colors.primary, children }) => {
 const styles = StyleSheet.create({
     text: {
         fontSize: 18,
-        fontWeight: 'bold'
+        fontFamily: 'PlusJakartaSans-Bold'
     }
 });
 

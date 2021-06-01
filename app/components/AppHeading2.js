@@ -8,8 +8,8 @@ const AppHeading2 = ({ fontColor = colors.black, children }) => {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 20,
-    fontWeight:'500'
+    fontSize: 18,
+    fontFamily: 'PlusJakartaSans-Bold'
   },
 });
 
