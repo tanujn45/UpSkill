@@ -13,11 +13,22 @@ const SignIn = ({ navigation }) => {
         <Screen bgColor={colors.black}>
             <View style={styles.container}>
                 <View style={{ marginBottom: 30 }}>
-                    <AppTitle fontColor={colors.white}>
+                    <AppTitle
+                        fontColor={colors.white}
+                        style={{ color: colors.white }}
+                    >
                         World is the New
-                        <AppTitle fontColor={colors.primary}> School</AppTitle>
+                        <AppTitle
+                            fontColor={colors.primary}
+                            style={{ color: colors.primary }}
+                        >
+                            School
+                        </AppTitle>
                     </AppTitle>
-                    <AppText fontColor={colors.white}>
+                    <AppText
+                        fontColor={colors.white}
+                        style={{ color: colors.white }}
+                    >
                         Sign in to view the repertoire of amazing courses
                         provided by UpSkill
                     </AppText>
