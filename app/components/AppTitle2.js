@@ -1,16 +1,19 @@
-import React from "react";
-import { Text, StyleSheet } from "react-native";
-import colors from "../constants/colors";
+import React from 'react';
+import { Text, StyleSheet } from 'react-native';
+import colors from '../constants/colors';
 
-const AppTitle2 = ({ fontColor = colors.black, children }) => {
-  return <Text style={[styles.text, { color: fontColor }]}>{children}</Text>;
+const AppTitle2 = (props) => {
+    return (
+        <Text style={[styles.text, { ...props.style }]}>{props.children}</Text>
+    );
 };
 
 const styles = StyleSheet.create({
-  text: {
-    fontSize: 30,
-    fontFamily: 'PlusJakartaSans-Medium'
-  },
+    text: {
+        fontSize: 30,
+        fontFamily: 'PlusJakartaSans-Medium',
+        color: colors.black
+    }
 });
 
 export default AppTitle2;
