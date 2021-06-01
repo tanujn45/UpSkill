@@ -1,9 +1,11 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import SignIn from './app/screens/SignIn';
 import HomeScreen from './app/screens/HomeScreen'
+import AuthNavigation from './app/navigation/AuthNavigation';
 
 export default function App() {
     let [fontsLoaded] = useFonts({
@@ -16,6 +18,10 @@ export default function App() {
     if (!fontsLoaded) {
         return <AppLoading />;
     } else {
-        return <HomeScreen />;
+        return (
+            <NavigationContainer>
+                <AuthNavigation />
+            </NavigationContainer>
+        );
     }
 }
