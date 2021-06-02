@@ -2,9 +2,11 @@ import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 import colors from '../constants/colors';
 
-const AppHeading2 = (props) => {
+const AppHeading2 = ({ fontColor = colors.white, style, children }) => {
     return (
-        <Text style={[styles.text, { ...props.style }]}>{props.children}</Text>
+        <Text style={[styles.text, { ...style }, { color: fontColor }]}>
+            {children}
+        </Text>
     );
 };
 

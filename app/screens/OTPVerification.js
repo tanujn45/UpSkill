@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-import {
-    View,
-    KeyboardAvoidingView,
-    StyleSheet,
-    TextInput,
-    Text
-} from 'react-native';
+import { View, KeyboardAvoidingView, StyleSheet, Text } from 'react-native';
 import {
     CodeField,
     Cursor,
@@ -18,7 +12,7 @@ import AppHeading from '../components/AppHeading';
 import AppText from '../components/AppText';
 import Screen from '../components/Screen';
 import colors from '../constants/colors';
-import Timer from '../components/Timer'
+import Timer from '../components/Timer';
 
 const CELL_COUNT = 4;
 
@@ -66,8 +60,19 @@ const OTPVerification = ({ navigation }) => {
                             </View>
                         )}
                     />
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            marginTop: 30
+                        }}
+                    >
+                        <AppText>Resend OTP </AppText>
+                        <Timer />
+                    </View>
                 </View>
-                <Timer />
+
                 <AppButton
                     title="Send OTP"
                     bgColor={colors.primary}
