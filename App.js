@@ -5,6 +5,7 @@ import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import SignIn from './app/screens/SignIn';
 import HomeScreen from './app/screens/HomeScreen'
+import CourseInfo from './app/screens/CourseInfo'
 import AuthNavigation from './app/navigation/AuthNavigation';
 
 export default function App() {
