@@ -7,12 +7,18 @@ import Home from '../screens/Home';
 import CompleteProfile from '../screens/CompleteProfile';
 import PhoneNumber from '../screens/PhoneNumber';
 import OTPVerification from '../screens/OTPVerification';
+import Landing from '../screens/Landing';
 
 const Stack = createStackNavigator();
 
 const AuthNavigation = () => {
     return (
         <Stack.Navigator>
+            <Stack.Screen
+                options={{ headerShown: false }}
+                name="Landing"
+                component={Landing}
+            />
             <Stack.Screen
                 options={{ headerShown: false }}
                 name="Welcome"

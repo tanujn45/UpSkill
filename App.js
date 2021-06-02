@@ -4,7 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import AuthNavigation from './app/navigation/AuthNavigation';
-import CourseInfo from'./app/screens/CourseInfo'
+import OTPVerification from './app/screens/OTPVerification';
+import Landing from './app/screens/Landing';
 
 export default function App() {
     let [fontsLoaded] = useFonts({
@@ -18,10 +19,9 @@ export default function App() {
         return <AppLoading />;
     } else {
         return (
-            <CourseInfo />
-            // <NavigationContainer>
-            //     <AuthNavigation />
-            // </NavigationContainer>
+            <NavigationContainer>
+                <AuthNavigation />
+            </NavigationContainer>
         );
     }
 }
