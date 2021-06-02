@@ -6,6 +6,7 @@ import { useFonts } from 'expo-font';
 import AuthNavigation from './app/navigation/AuthNavigation';
 import OTPVerification from './app/screens/OTPVerification';
 import Landing from './app/screens/Landing';
+import AppNavigation from './app/navigation/AppNavigation';
 
 export default function App() {
     let [fontsLoaded] = useFonts({
@@ -20,7 +21,8 @@ export default function App() {
     } else {
         return (
             <NavigationContainer>
-                <AuthNavigation />
+                {/* <AuthNavigation /> */}
+                <AppNavigation />
             </NavigationContainer>
         );
     }

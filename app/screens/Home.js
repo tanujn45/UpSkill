@@ -13,7 +13,7 @@ import AppHeading from '../components/AppHeading';
 import AppText from '../components/AppText';
 import Screen from '../components/Screen';
 
-const Home = () => {
+const Home = ({ navigation }) => {
     const [category, setCategory] = useState([
         {
             category: 'Comedy',
@@ -78,6 +78,7 @@ const Home = () => {
                     </AppHeading>
 
                     <TouchableOpacity
+                        onPress={() => navigation.navigate("CourseInfo")}
                         style={{ marginTop: 20 }}
                         activeOpacity={0.8}
                     >
