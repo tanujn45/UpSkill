@@ -5,6 +5,7 @@ import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import AuthNavigation from './app/navigation/AuthNavigation';
 import OTPVerification from './app/screens/OTPVerification';
+import Landing from './app/screens/Landing';
 
 export default function App() {
     let [fontsLoaded] = useFonts({
