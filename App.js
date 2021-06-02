@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import AuthNavigation from './app/navigation/AuthNavigation';
+import OTPVerification from './app/screens/OTPVerification';
 
 export default function App() {
     let [fontsLoaded] = useFonts({

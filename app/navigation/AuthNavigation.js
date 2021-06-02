@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Welcome from '../screens/Welcome';
 import Home from '../screens/Home';
 import CompleteProfile from '../screens/CompleteProfile';
+import PhoneNumber from '../screens/PhoneNumber';
+import OTPVerification from '../screens/OTPVerification';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +17,16 @@ const AuthNavigation = () => {
                 options={{ headerShown: false }}
                 name="Welcome"
                 component={Welcome}
+            />
+            <Stack.Screen
+                options={{ headerShown: false }}
+                name="PhoneNumber"
+                component={PhoneNumber}
+            />
+            <Stack.Screen
+                options={{ headerShown: false }}
+                name="OTPVerification"
+                component={OTPVerification}
             />
             <Stack.Screen
                 options={{ headerShown: false }}

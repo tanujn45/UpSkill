@@ -40,7 +40,7 @@ const Welcome = ({ navigation }) => {
                     <View style={styles.hr} />
                 </View>
                 <AppButton
-                    onPress={() => navigation.navigate('CompleteProfile')}
+                    onPress={() => navigation.navigate('PhoneNumber')}
                     title="Create an account"
                     bgColor={colors.primary}
                 />

@@ -1,57 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
 
 import colors from '../constants/colors';
-
 import AppButton from '../components/AppButton';
 import AppHeading from '../components/AppHeading';
 import AppText from '../components/AppText';
 import Screen from '../components/Screen';
 
 const CompleteProfile = ({ navigation }) => {
-    const [number, onChangeNumber] = React.useState(null);
-    const [text, onChangeText] = React.useState(null);
+    const [fullName, setFullName] = useState("")
+    const [email, setEmail] = useState("")
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [country, setCountry] = useState("");
+
     return (
         <Screen>
-            <View style={styles.container}>
+            <View style={styles.container} behavior={Platform.OS == "ios" ? "padding" : "height"}
+                keyboardVerticalOffset={Platform.OS == "ios" ? 0 : 20}
+                enabled={Platform.OS === "ios"} style={styles.container}>
                 <View>
-                    <AppHeading style={styles.heading}>Compelete your profile</AppHeading>
-                    <AppText>Name</AppText>
+                    <AppHeading style={styles.heading}>Compelete your <AppHeading fontColor={colors.primary}>profile</AppHeading></AppHeading>
+                    <AppText>Full Name</AppText>
                     <TextInput
                         style={styles.input}
-                        onChangeText={onChangeText}
-                        value={text}
+                        onChangeText={setFullName}
+                        value={fullName}
                         placeholder="Eg. John Doe"
                         keyboardType="default"
+                        returnKeyType={'done'}
                         placeholderTextColor={colors.grey}
                     />
-                    <AppText>E-mail Address</AppText>
+                    <AppText>Email Address</AppText>
                     <TextInput
                         style={styles.input}
-                        onChangeText={onChangeText}
-                        value={text}
+                        onChangeText={setEmail}
+                        value={email}
                         placeholder="Eg. john@doe.com"
                         keyboardType="email-address"
+                        returnKeyType={'done'}
                         placeholderTextColor={colors.grey}
                     />
-                    <AppText>
-                        Enter your mobile number
-                </AppText>
+                    <AppText>Phone Number</AppText>
                     <TextInput
                         style={styles.input}
-                        onChangeText={onChangeNumber}
-                        value={number}
+                        onChangeText={setPhoneNumber}
+                        value={phoneNumber}
                         placeholder="Eg. 9876543210"
                         keyboardType="phone-pad"
+                        returnKeyType={'done'}
                         placeholderTextColor={colors.grey}
                     />
                     <AppText>Country</AppText>
                     <TextInput
                         style={styles.input}
-                        onChangeText={onChangeText}
-                        value={text}
+                        onChangeText={setCountry}
+                        value={country}
                         placeholder="Eg. India"
                         keyboardType="default"
+                        returnKeyType={'done'}
                         placeholderTextColor={colors.grey}
                     />
                 </View>

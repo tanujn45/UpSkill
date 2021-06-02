@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-
         backgroundColor: colors.grey,
         borderRadius: 7,
         marginBottom: 15,
@@ -60,6 +59,7 @@ const styles = StyleSheet.create({
         color: colors.white,
         fontSize: 12,
         fontWeight: '500',
+        fontFamily: "PlusJakartaSans-Medium",
         textTransform: 'uppercase'
     },
     icon: {
