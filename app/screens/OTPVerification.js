@@ -32,12 +32,7 @@ const OTPVerification = ({ navigation }) => {
 
     return (
         <Screen>
-            <KeyboardAvoidingView
-                behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
-                keyboardVerticalOffset={Platform.OS == 'ios' ? 0 : 20}
-                enabled={Platform.OS === 'ios'}
-                style={styles.container}
-            >
+            <KeyboardAvoidingView style={styles.container}>
                 <View>
                     <AppHeading style={styles.heading}>Verification</AppHeading>
                     <AppText>Enter the OTP sent to +91 9876543210</AppText>
