@@ -23,12 +23,11 @@ const UpToDate = () => {
                     </AppText>
                     <AppButton title="okay" bgColor={colors.primary} />
                 </View>
-                <TouchableOpacity activeOpacity={0.8}>
-                    <AppText
-                        onPress={() => Linking.openURL('https://google.com')}
-                    >
-                        MAYBE LATER
-                    </AppText>
+                <TouchableOpacity
+                    activeOpacity={0.8}
+                    onPress={() => Linking.openURL('https://google.com')}
+                >
+                    <AppText>MAYBE LATER</AppText>
                 </TouchableOpacity>
             </View>
         </Screen>
