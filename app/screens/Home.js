@@ -7,9 +7,11 @@ import {
     FlatList,
     TouchableOpacity
 } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+
 import colors from '../constants/colors';
 import AppHeading from '../components/AppHeading';
-import AppText from '../components/AppText';
+import AppHeading2 from '../components/AppHeading2';
 import Screen from '../components/Screen';
 
 const Home = ({ navigation }) => {
@@ -45,9 +47,8 @@ const Home = ({ navigation }) => {
         <Screen bgColor={colors.black}>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.categoriesContainer}>
-                    <AppHeading fontColor={colors.white}>Categories</AppHeading>
+                    <AppHeading2 fontColor={colors.white}>Categories</AppHeading2>
                     <FlatList
-                        style={styles.flatlist}
                         data={category}
                         horizontal
                         showsHorizontalScrollIndicator={false}
@@ -60,21 +61,27 @@ const Home = ({ navigation }) => {
                                     source={{ uri: item.img }}
                                     style={styles.categoryImage}
                                 />
+                                <LinearGradient
+                                    colors={[
+                                        colors.transparent,
+                                        colors.transparent,
+                                        colors.black
+                                    ]}
+                                    style={styles.gradient}
+                                />
                                 <View style={styles.categoryTextBlock}>
-                                    <AppText fontColor={colors.white}>
+                                    <AppHeading2 fontColor={colors.white}>
                                         {item.category}
-                                    </AppText>
+                                    </AppHeading2>
                                 </View>
                             </TouchableOpacity>
                         )}
                     />
                 </View>
-
                 <View style={styles.topCoursesContainer}>
-                    <AppHeading fontColor={colors.white}>
+                    <AppHeading2 fontColor={colors.white}>
                         Top Courses
-                    </AppHeading>
-
+                    </AppHeading2>
                     <TouchableOpacity
                         onPress={() => navigation.navigate("CourseInfo")}
                         style={{ marginTop: 20 }}

@@ -94,7 +94,6 @@ const CourseInfo = ({ navigation }) => {
                                     ]}
                                     style={styles.gradient}
                                 />
-
                                 <View style={styles.categoryTextBlock}>
                                     <AppHeading2 fontColor={colors.white}>
                                         {item.category}
