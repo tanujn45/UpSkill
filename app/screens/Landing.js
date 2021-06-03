@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Image, View } from 'react-native';
 import MyFadeInComponent from '../components/FadeInView';
-import Welcome from './Welcome';
 
 const Landing = ({ navigation }) => {
     return (
@@ -9,11 +8,11 @@ const Landing = ({ navigation }) => {
             <Image
                 fadeDuration={1200}
                 source={require('../assets/icons/Group.png')}
-                // onLoad={() => {
-                //     setTimeout(() => {
-                //         navigation.push('Welcome');
-                //     }, 1400);
-                // }}
+                onLoad={() => {
+                    setTimeout(() => {
+                        navigation.navigate('Welcome');
+                    }, 1400);
+                }}
             />
             <MyFadeInComponent />
         </View>

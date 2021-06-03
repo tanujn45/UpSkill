@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
     btnTitle: {
         color: colors.white,
         fontSize: 12,
-        fontWeight: '500',
         fontFamily: "PlusJakartaSans-Medium",
         textTransform: 'uppercase'
     },

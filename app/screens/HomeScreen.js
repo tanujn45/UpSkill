@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import {
     StyleSheet,
     Image,
@@ -12,7 +13,7 @@ import AppHeading from '../components/AppHeading';
 import AppText from '../components/AppText';
 import Screen from '../components/Screen';
 
-const Home = ({ navigation }) => {
+const HomeScreen = () => {
     const [category, setCategory] = useState([
         {
             category: 'Comedy',
@@ -46,6 +47,7 @@ const Home = ({ navigation }) => {
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.categoriesContainer}>
                     <AppHeading fontColor={colors.white}>Categories</AppHeading>
+
                     <FlatList
                         style={styles.flatlist}
                         data={category}
@@ -76,7 +78,6 @@ const Home = ({ navigation }) => {
                     </AppHeading>
 
                     <TouchableOpacity
-                        onPress={() => navigation.navigate("CourseInfo")}
                         style={{ marginTop: 20 }}
                         activeOpacity={0.8}
                     >
@@ -128,11 +129,13 @@ const styles = StyleSheet.create({
         marginRight: 40,
         backgroundColor: '#9ad6d2'
     },
+
     topCoursesContainer: {
         marginTop: 45,
         paddingRight: '5%',
         paddingLeft: '5%'
     },
+
     courseBlock: {
         width: '100%',
         height: 275,
@@ -141,15 +144,18 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         width: '100%',
+        // height: '100%',
         resizeMode: 'contain',
         borderRadius: 10
     },
     categoryImage: {
         width: '100%',
         height: '100%',
+        //  flex: 1,
         position: 'absolute',
+        //  resizeMode: 'cover',
         borderRadius: 10
     }
 });
 
-export default Home;
+export default HomeScreen;
