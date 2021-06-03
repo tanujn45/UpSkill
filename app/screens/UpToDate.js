@@ -17,7 +17,14 @@ const UpToDate = () => {
                     >
                         Want to stay up to date?
                     </AppHeading2>
-                    <AppText style={styles.apptext}>
+                    <AppText
+                        style={{
+                            textAlign: 'center',
+                            marginBottom: 20,
+                            color: colors.grey2,
+                            width: '90%'
+                        }}
+                    >
                         Allow Upskill to send you notifications about class
                         announcements, new releases, and more.
                     </AppText>
@@ -50,12 +57,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         marginBottom: 20
-    },
-    apptext: {
-        textAlign: 'center',
-        marginBottom: 20,
-        color: colors.grey2,
-        width: '90%'
     }
 });
 
