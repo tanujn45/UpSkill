@@ -13,14 +13,17 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 import colors from '../constants/colors';
 import AppText from '../components/AppText';
+import AppText2 from '../components/AppText2'
 import AppTitle from '../components/AppTitle';
 import AppButton from '../components/AppButton';
 import AppHeading2 from '../components/AppHeading2';
 import Home from './Home';
+import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createMaterialTopTabNavigator();
 
 const CourseInfo = ({ navigation }) => {
+
     const [category, setCategory] = useState([
         {
             category: 'Comedy',
@@ -49,6 +52,29 @@ const CourseInfo = ({ navigation }) => {
         }
     ]);
 
+    const [content, setContent] = useState([
+        {
+            videoTitle: 'Intro to web dev',
+            thumbnail: 'https://images.theconversation.com/files/350609/original/file-20200731-14-yfu9hp.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
+            videoLength: '9:50',
+            key: '1'
+        },
+        {
+            videoTitle: 'Intro to how to approach web dev',
+            thumbnail: 'https://images.theconversation.com/files/350609/original/file-20200731-14-yfu9hp.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
+            videoLength: '9:50',
+            key: '2'
+        },
+        {
+            videoTitle: 'How to understand any intro',
+            thumbnail: 'https://images.theconversation.com/files/350609/original/file-20200731-14-yfu9hp.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
+            videoLength: '9:50',
+            key: '3'
+        },
+    ]);
+
+    
+    
     const Overview = (props) => (
         <ScrollView style={{ backgroundColor: colors.black }}>
             <View style={styles.courseBodyBox}>
@@ -119,6 +145,94 @@ const CourseInfo = ({ navigation }) => {
         </ScrollView>
     );
 
+    const Lessons = (props) => (
+        <ScrollView style={{ backgroundColor: colors.black }}>
+            <View style={styles.courseBodyBox}>
+                <View style={styles.videoBlock}>
+                    <View style={styles.videoSection}>
+                        <View style={styles.videoThumbnail}>
+                            <Image style={styles.thumbnailImg} source={{uri:'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'}} />
+                            <View style={{backgroundColor: '#686868', opacity: (0.8), borderTopLeftRadius: 6, borderBottomRightRadius:6}}>
+                                <AppText style={{fontSize: 12}} fontColor={colors.white}>09:50</AppText>
+                            </View>
+                        </View>
+                        <View style={styles.videoInfo}>
+                        <AppText2 style={{fontSize: 15}} fontColor={colors.white}>Intro to web dev</AppText2>
+                        <AppText2 style={{fontSize: 12}} fontColor='#a1a1a1'>Lesson 1</AppText2>
+                        </View>
+                    </View>
+                    <View style={styles.aboutVideo}>
+                        <AppText style={{fontSize: 13}} fontColor={colors.white}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</AppText>
+                    </View>
+                    <View style={styles.listAndDownloadSection}>
+                        <TouchableOpacity style={styles.myList}>
+                        <Ionicons style={{marginTop:2}} name="md-add-outline" size={24} color="white" />
+                            <AppText style={{fontFamily: 'PlusJakartaSans-Medium', fontSize: 13}} fontColor={colors.white}>My List</AppText>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.myList}>
+                        <Ionicons style={{marginTop:3, marginRight:6}} name="md-cloud-download-outline" size={24} color="white" />
+                            <AppText style={{fontFamily: 'PlusJakartaSans-Medium', fontSize: 13}} fontColor={colors.white}>Download</AppText>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.videoBlock}>
+                    <View style={styles.videoSection}>
+                        <View style={styles.videoThumbnail}>
+                            <Image style={styles.thumbnailImg} source={{uri:'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'}} />
+                            <View style={{backgroundColor: '#686868', opacity: (0.8), borderTopLeftRadius: 6, borderBottomRightRadius:6}}>
+                                <AppText style={{fontSize: 12}} fontColor={colors.white}>09:50</AppText>
+                            </View>
+                        </View>
+                        <View style={styles.videoInfo}>
+                        <AppText2 style={{fontSize: 15}} fontColor={colors.white}>Intro to web dev</AppText2>
+                        <AppText2 style={{fontSize: 12}} fontColor='#a1a1a1'>Lesson 1</AppText2>
+                        </View>
+                    </View>
+                    <View style={styles.aboutVideo}>
+                        <AppText style={{fontSize: 13}} fontColor={colors.white}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</AppText>
+                    </View>
+                    <View style={styles.listAndDownloadSection}>
+                        <TouchableOpacity style={styles.myList}>
+                        <Ionicons style={{marginTop:2}} name="md-add-outline" size={24} color="white" />
+                            <AppText style={{fontFamily: 'PlusJakartaSans-Medium', fontSize: 13}} fontColor={colors.white}>My List</AppText>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.myList}>
+                        <Ionicons style={{marginTop:3, marginRight:6}} name="md-cloud-download-outline" size={24} color="white" />
+                            <AppText style={{fontFamily: 'PlusJakartaSans-Medium', fontSize: 13}} fontColor={colors.white}>Download</AppText>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <View style={styles.videoBlock}>
+                    <View style={styles.videoSection}>
+                        <View style={styles.videoThumbnail}>
+                            <Image style={styles.thumbnailImg} source={{uri:'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'}} />
+                            <View style={{backgroundColor: '#686868', opacity: (0.8), borderTopLeftRadius: 6, borderBottomRightRadius:6}}>
+                                <AppText style={{fontSize: 12}} fontColor={colors.white}>09:50</AppText>
+                            </View>
+                        </View>
+                        <View style={styles.videoInfo}>
+                        <AppText2 style={{fontSize: 15}} fontColor={colors.white}>Intro to web dev</AppText2>
+                        <AppText2 style={{fontSize: 12}} fontColor='#a1a1a1'>Lesson 1</AppText2>
+                        </View>
+                    </View>
+                    <View style={styles.aboutVideo}>
+                        <AppText style={{fontSize: 13}} fontColor={colors.white}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</AppText>
+                    </View>
+                    <View style={styles.listAndDownloadSection}>
+                        <TouchableOpacity style={styles.myList}>
+                        <Ionicons style={{marginTop:2}} name="md-add-outline" size={24} color="white" />
+                            <AppText style={{fontFamily: 'PlusJakartaSans-Medium', fontSize: 13}} fontColor={colors.white}>My List</AppText>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.myList}>
+                        <Ionicons style={{marginTop:3, marginRight:6}} name="md-cloud-download-outline" size={24} color="white" />
+                            <AppText style={{fontFamily: 'PlusJakartaSans-Medium', fontSize: 13}} fontColor={colors.white}>Download</AppText>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </View>
+        </ScrollView>
+    );
+
     return (
         <View style={styles.container}>
             <ImageBackground
@@ -155,7 +269,7 @@ const CourseInfo = ({ navigation }) => {
                     style: { backgroundColor: colors.black }
                 }}
             >
-                <Tab.Screen name="Lessons" component={Home} />
+                <Tab.Screen name="Lessons" component={Lessons} />
                 <Tab.Screen name="Overview" component={Overview} />
             </Tab.Navigator>
         </View>
@@ -163,6 +277,52 @@ const CourseInfo = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+    videoBlock:{
+        width:'96%',
+        backgroundColor: '#292929',
+        borderRadius: 10,
+        paddingTop:5,
+        marginBottom:25,
+    },
+    videoInfo:{
+        width: 160,
+        marginLeft:16
+    },
+    thumbnailImg:{
+        width: '100%',
+        height: '100%',
+        //  flex: 1,
+        position: 'absolute',
+         resizeMode: 'cover',
+        borderRadius: 6
+    },
+    videoSection:{
+        flexDirection:'row',
+        justifyContent:'flex-start',
+        alignItems: 'center',
+        margin: 14
+    },
+    videoThumbnail:{
+        width:140,
+        height:80,
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+    },
+    aboutVideo:{
+        paddingRight:14,
+        paddingLeft:14,
+        marginBottom:20,
+    },
+    listAndDownloadSection:{
+        padding:12,
+        flexDirection:'row',
+        justifyContent:'space-around',
+        borderTopWidth:.8,
+        borderTopColor: '#929292'
+    },
+    myList:{
+        flexDirection:'row'
+    },
     container: {
         flex: 1,
         backgroundColor: colors.black,
@@ -196,7 +356,9 @@ const styles = StyleSheet.create({
         right: 0
     },
     courseBodyBox: {
-        padding: 20
+        padding: 20,
+        marginTop:10,
+        alignItems: 'center'
     },
     categoryTextBlock: {
         marginBottom: 20
@@ -222,7 +384,11 @@ const styles = StyleSheet.create({
         height: '100%',
         position: 'absolute',
         borderRadius: 10
-    }
+    },
+    topContainer: {
+        flexDirection:'row',
+        color: colors.white
+    },
 });
 
 export default CourseInfo;
