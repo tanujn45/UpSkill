@@ -13,7 +13,7 @@ const AppHeading2 = ({ fontColor = colors.white, style, children }) => {
 const styles = StyleSheet.create({
     text: {
         fontSize: 18,
-        fontFamily: 'PlusJakartaSans-Light',
+        fontFamily: 'PlusJakartaSans-Bold',
         color: colors.black
     }
 });

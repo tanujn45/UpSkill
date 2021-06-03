@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {
     StyleSheet,
     Image,
@@ -47,7 +46,6 @@ const Home = ({ navigation }) => {
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.categoriesContainer}>
                     <AppHeading fontColor={colors.white}>Categories</AppHeading>
-
                     <FlatList
                         style={styles.flatlist}
                         data={category}
@@ -130,13 +128,11 @@ const styles = StyleSheet.create({
         marginRight: 40,
         backgroundColor: '#9ad6d2'
     },
-
     topCoursesContainer: {
         marginTop: 45,
         paddingRight: '5%',
         paddingLeft: '5%'
     },
-
     courseBlock: {
         width: '100%',
         height: 275,
@@ -145,16 +141,13 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         width: '100%',
-        // height: '100%',
         resizeMode: 'contain',
         borderRadius: 10
     },
     categoryImage: {
         width: '100%',
         height: '100%',
-        //  flex: 1,
         position: 'absolute',
-        //  resizeMode: 'cover',
         borderRadius: 10
     }
 });

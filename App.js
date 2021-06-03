@@ -7,6 +7,7 @@ import AuthNavigation from './app/navigation/AuthNavigation';
 import OTPVerification from './app/screens/OTPVerification';
 import Landing from './app/screens/Landing';
 import AppNavigation from './app/navigation/AppNavigation';
+import CourseInfo from './app/screens/CourseInfo';
 
 export default function App() {
     let [fontsLoaded] = useFonts({
@@ -22,7 +23,8 @@ export default function App() {
         return (
             <NavigationContainer>
                 {/* <AuthNavigation /> */}
-                <AppNavigation />
+                {/* <AppNavigation /> */}
+                <CourseInfo />
             </NavigationContainer>
         );
     }
