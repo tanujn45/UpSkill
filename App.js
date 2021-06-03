@@ -8,6 +8,8 @@ import OTPVerification from './app/screens/OTPVerification';
 import CompleteProfile from './app/screens/CompleteProfile';
 import CourseInfo from './app/screens/CourseInfo';
 import AppNavigation from './app/navigation/AppNavigation';
+import Profile from './app/screens/Profile';
+import UpToDate from './app/screens/UpToDate';
 
 export default function App() {
     let [fontsLoaded] = useFonts({
@@ -24,6 +26,8 @@ export default function App() {
             <NavigationContainer>
                 <AppNavigation />
                 {/* <AuthNavigation /> */}
+                {/* <AuthNavigation /> */}
+                <Profile />
             </NavigationContainer>
         );
     }

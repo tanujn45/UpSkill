@@ -17,18 +17,24 @@ const UpToDate = () => {
                     >
                         Want to stay up to date?
                     </AppHeading2>
-                    <AppText style={styles.apptext}>
+                    <AppText
+                        style={{
+                            textAlign: 'center',
+                            marginBottom: 20,
+                            color: colors.grey2,
+                            width: '90%'
+                        }}
+                    >
                         Allow Upskill to send you notifications about class
                         announcements, new releases, and more.
                     </AppText>
                     <AppButton title="okay" bgColor={colors.primary} />
                 </View>
-                <TouchableOpacity activeOpacity={0.8}>
-                    <AppText
-                        onPress={() => Linking.openURL('https://google.com')}
-                    >
-                        MAYBE LATER
-                    </AppText>
+                <TouchableOpacity
+                    activeOpacity={0.8}
+                    onPress={() => Linking.openURL('https://google.com')}
+                >
+                    <AppText>MAYBE LATER</AppText>
                 </TouchableOpacity>
             </View>
         </Screen>
@@ -51,12 +57,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         marginBottom: 20
-    },
-    apptext: {
-        textAlign: 'center',
-        marginBottom: 20,
-        color: colors.grey2,
-        width: '90%'
     }
 });
 

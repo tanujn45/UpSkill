@@ -13,7 +13,7 @@ const AppText2 = ({ fontColor = colors.white, style, children }) => {
 const styles = StyleSheet.create({
     text: {
         fontSize: 18,
-        fontFamily: 'PlusJakartaSans-Bold',
+        fontFamily: 'PlusJakartaSans-Light',
         color: colors.primary
     }
 });
