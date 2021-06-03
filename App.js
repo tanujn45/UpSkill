@@ -6,6 +6,7 @@ import { useFonts } from 'expo-font';
 import AuthNavigation from './app/navigation/AuthNavigation';
 import OTPVerification from './app/screens/OTPVerification';
 import CompleteProfile from './app/screens/CompleteProfile';
+import CourseInfo from './app/screens/CourseInfo';
 
 export default function App() {
     let [fontsLoaded] = useFonts({
