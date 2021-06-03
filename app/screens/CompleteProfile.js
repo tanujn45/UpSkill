@@ -8,18 +8,27 @@ import AppText from '../components/AppText';
 import Screen from '../components/Screen';
 
 const CompleteProfile = ({ navigation }) => {
-    const [fullName, setFullName] = useState("")
-    const [email, setEmail] = useState("")
-    const [phoneNumber, setPhoneNumber] = useState("");
-    const [country, setCountry] = useState("");
+    const [fullName, setFullName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [country, setCountry] = useState('');
 
     return (
         <Screen>
-            <View style={styles.container} behavior={Platform.OS == "ios" ? "padding" : "height"}
-                keyboardVerticalOffset={Platform.OS == "ios" ? 0 : 20}
-                enabled={Platform.OS === "ios"} style={styles.container}>
+            <View
+                style={styles.container}
+                behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
+                keyboardVerticalOffset={Platform.OS == 'ios' ? 0 : 20}
+                enabled={Platform.OS === 'ios'}
+                style={styles.container}
+            >
                 <View>
-                    <AppHeading style={styles.heading}>Compelete your <AppHeading fontColor={colors.primary}>profile</AppHeading></AppHeading>
+                    <AppHeading style={styles.heading}>
+                        Compelete your{' '}
+                        <AppHeading fontColor={colors.primary}>
+                            profile
+                        </AppHeading>
+                    </AppHeading>
                     <AppText>Full Name</AppText>
                     <TextInput
                         style={styles.input}
@@ -61,7 +70,10 @@ const CompleteProfile = ({ navigation }) => {
                         placeholderTextColor={colors.grey}
                     />
                 </View>
-                <AppButton bgColor={colors.primary} onPress={() => navigation.navigate('Home')} />
+                <AppButton
+                    bgColor={colors.primary}
+                    onPress={() => navigation.navigate('Home')}
+                />
             </View>
         </Screen>
     );
@@ -76,7 +88,7 @@ const styles = StyleSheet.create({
         padding: 20
     },
     heading: {
-        marginBottom: 25,
+        marginBottom: 25
     },
     input: {
         borderBottomWidth: 1,
@@ -85,7 +97,8 @@ const styles = StyleSheet.create({
         marginTop: 15,
         marginBottom: 35,
         paddingBottom: 10,
-    },
+        color: '#fff'
+    }
 });
 
 export default CompleteProfile;

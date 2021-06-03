@@ -1,21 +1,34 @@
-import React, { useState } from 'react'
-import { View, StyleSheet, TextInput, KeyboardAvoidingView } from 'react-native'
+import React, { useState } from 'react';
+import {
+    View,
+    StyleSheet,
+    TextInput,
+    KeyboardAvoidingView
+} from 'react-native';
 
-import AppButton from '../components/AppButton'
-import AppHeading from '../components/AppHeading'
-import AppText from '../components/AppText'
-import Screen from '../components/Screen'
-import colors from '../constants/colors'
+import AppButton from '../components/AppButton';
+import AppHeading from '../components/AppHeading';
+import AppText from '../components/AppText';
+import Screen from '../components/Screen';
+import colors from '../constants/colors';
 
 const PhoneNumber = ({ navigation }) => {
-    const [phoneNumber, setPhoneNumber] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState('');
     return (
         <Screen>
-            <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"}
-                keyboardVerticalOffset={Platform.OS == "ios" ? 0 : 20}
-                enabled={Platform.OS === "ios"} style={styles.container}>
+            <KeyboardAvoidingView
+                behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
+                keyboardVerticalOffset={Platform.OS == 'ios' ? 0 : 20}
+                enabled={Platform.OS === 'ios'}
+                style={styles.container}
+            >
                 <View>
-                    <AppHeading style={styles.heading}>Compelete your <AppHeading fontColor={colors.primary}>profile</AppHeading></AppHeading>
+                    <AppHeading style={styles.heading}>
+                        Compelete your{' '}
+                        <AppHeading fontColor={colors.primary}>
+                            profile
+                        </AppHeading>
+                    </AppHeading>
                     <AppText>Phone Number</AppText>
                     <TextInput
                         style={styles.input}
@@ -27,11 +40,15 @@ const PhoneNumber = ({ navigation }) => {
                         placeholderTextColor={colors.grey}
                     />
                 </View>
-                <AppButton title="Send OTP" bgColor={colors.primary} onPress={() => navigation.navigate('OTPVerification')} />
+                <AppButton
+                    title="Send OTP"
+                    bgColor={colors.primary}
+                    onPress={() => navigation.navigate('OTPVerification')}
+                />
             </KeyboardAvoidingView>
         </Screen>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -42,7 +59,7 @@ const styles = StyleSheet.create({
         padding: 20
     },
     heading: {
-        marginBottom: 25,
+        marginBottom: 25
     },
     input: {
         borderBottomWidth: 1,
@@ -51,7 +68,8 @@ const styles = StyleSheet.create({
         marginTop: 15,
         marginBottom: 35,
         paddingBottom: 10,
-    },
+        color: '#fff'
+    }
 });
 
-export default PhoneNumber
+export default PhoneNumber;
