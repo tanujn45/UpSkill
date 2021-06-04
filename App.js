@@ -25,9 +25,9 @@ export default function App() {
         return (
             <NavigationContainer>
                 {/* <AppNavigation /> */}
+                <AuthNavigation />
                 {/* <AuthNavigation /> */}
-                {/* <AuthNavigation /> */}
-                <CourseInfo />
+                {/* <Profile /> */}
             </NavigationContainer>
         );
     }
