@@ -24,10 +24,10 @@ export default function App() {
     } else {
         return (
             <NavigationContainer>
-                <AppNavigation />
+                {/* <AppNavigation /> */}
                 {/* <AuthNavigation /> */}
                 {/* <AuthNavigation /> */}
-                <Profile />
+                <CourseInfo />
             </NavigationContainer>
         );
     }
