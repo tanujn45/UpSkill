@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         alignItems: 'center',
         marginTop: 20,
-        borderRadius: 10,
+        borderRadius: 8,
         width: 175,
         height: 245,
         marginRight: 40,
@@ -143,19 +143,19 @@ const styles = StyleSheet.create({
     courseBlock: {
         width: '100%',
         height: 275,
-        borderRadius: 10
+        borderRadius: 8
     },
     image: {
         flex: 1,
         width: '100%',
         resizeMode: 'contain',
-        borderRadius: 10
+        borderRadius: 8
     },
     categoryImage: {
         width: '100%',
         height: '100%',
         position: 'absolute',
-        borderRadius: 10
+        borderRadius: 8
     }
 });
 

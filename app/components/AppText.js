@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 15,
         fontFamily: 'PlusJakartaSans-Light',
-        color: colors.black
+        color: colors.black,
+        lineHeight: 22
     }
 });
 
