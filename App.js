@@ -24,8 +24,8 @@ export default function App() {
     } else {
         return (
             <NavigationContainer>
-                <AppNavigation />
-                {/* <AuthNavigation /> */}
+                {/* <AppNavigation /> */}
+                <AuthNavigation />
                 {/* <AuthNavigation /> */}
                 {/* <Profile /> */}
             </NavigationContainer>
