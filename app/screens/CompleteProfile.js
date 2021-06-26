@@ -1,17 +1,87 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
-
+import axios from "axios";
 import colors from '../constants/colors';
 import AppButton from '../components/AppButton';
 import AppHeading from '../components/AppHeading';
 import AppText from '../components/AppText';
 import Screen from '../components/Screen';
+import { func } from 'prop-types';
 
-const CompleteProfile = ({ navigation }) => {
+const CompleteProfile = ({ route, navigation }) => {
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState(route.params);
     const [country, setCountry] = useState('');
+
+
+    function sendData() {
+        var axios = require('axios');
+var data = JSON.stringify({
+  "name": fullName,
+  "email": email,
+  "number": phoneNumber,
+  "residence": country
+});
+
+console.log(data)
+
+var config = {
+  method: 'post',
+  url: 'http://10.0.2.2:3000/api/users',
+  headers: { 
+    'Content-Type': 'application/json'
+  },
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+            // axios.post('http://localhost:3000/api/users',
+            //          {
+            //             'name': fullName,
+            //             'email': email,
+            //             'number': phoneNumber,
+            //             'residence': country,
+            //           })
+            //           .then(function (response) {
+            //             console.log(response);
+            //           })
+            //           .catch(function (error) {
+            //             if (error.response) {
+            //                 // The request was made, but the server responded with a status code
+            //                 // that falls out of the range of 2xx
+            //                 console.log(error.response.data);
+            //                 console.log(error.response.status);
+            //                 console.log(error.response.headers);
+            //               } else {
+            //                 // Something happened in setting up the request that triggered an Error
+            //                 console.log('Error', error.message);
+            //               }
+            //               console.log(error.config);
+            //           });
+
+            // axios({
+            //     method: "post",
+            //     url: "http://localhost:3000/api/users",
+            //     data: bodyFormData,
+            //     headers: { "Content-Type": "multipart/form-data" },
+            //   })
+            //     .then(function (response) {
+            //       //handle success
+            //       console.log(response);
+            //     })
+            //     .catch(function (response) {
+            //       //handle error
+            //       console.log(response);
+            //     });
+    }
 
     return (
         <Screen>
@@ -72,7 +142,7 @@ const CompleteProfile = ({ navigation }) => {
                 </View>
                 <AppButton
                     bgColor={colors.primary}
-                    onPress={() => navigation.navigate('Home')}
+                    onPress={sendData()}
                 />
             </View>
         </Screen>

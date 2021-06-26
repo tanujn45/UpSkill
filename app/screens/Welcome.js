@@ -1,12 +1,17 @@
 import React from 'react';
+// import * as firebase from "firebase";
 import { StyleSheet, View, Text } from 'react-native';
 import AppButton from '../components/AppButton';
 import colors from '../constants/colors';
 import AppTitle from '../components/AppTitle';
 import AppText from '../components/AppText';
 import Screen from '../components/Screen';
+// import { signInWithFacebook } from '../../api/firebaseMethods'
+
 
 const Welcome = ({ navigation }) => {
+  
+
     return (
         <Screen>
             <View style={styles.container}>
@@ -27,12 +32,14 @@ const Welcome = ({ navigation }) => {
                     title="Continue with Google"
                     bgColor={colors.white}
                     fontColor={colors.black}
+                    // onPress={signInAsync}
                     icon="google"
                 />
                 <AppButton
                     title="Continue with Facebook"
                     bgColor={'#1877f2'}
                     icon="facebook"
+                    // onPress={() => signInWithFacebook()}
                 />
                 <View style={styles.seperator}>
                     <View style={styles.hr} />
