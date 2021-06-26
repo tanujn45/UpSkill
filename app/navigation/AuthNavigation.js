@@ -8,6 +8,7 @@ import CompleteProfile from '../screens/CompleteProfile';
 import PhoneNumber from '../screens/PhoneNumber';
 import OTPVerification from '../screens/OTPVerification';
 import Landing from '../screens/Landing';
+import AppNavigation from './AppNavigation';
 
 const Stack = createStackNavigator();
 
@@ -42,7 +43,7 @@ const AuthNavigation = () => {
             <Stack.Screen
                 options={{ headerShown: false }}
                 name="Home"
-                component={Home}
+                component={AppNavigation}
             />
         </Stack.Navigator>
     );
